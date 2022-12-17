@@ -1,0 +1,36 @@
+users
+id UNIQUE INTEGER
+name CHAR(25)
+username UNIQUE CHAR(30)
+password CHAR(20)
+joind_at TIMESTAMP
+liked_ids INTEGER(300)
+tweet_ids INTEGER(100)
+following INTEGER(100)
+followers INTEGER(100)
+tweet_get INTEGER(100)
+inbox INTEGER(100)
+
+tweets
+tweet_id UNIQUE INTEGER
+person_username CHAR(10)
+retweet_of INTEGER
+comments_id INTEGER(100)
+liked_ids INTEGER(600)
+time TIMESTAMP
+tweet CHAR(1000)
+
+comments
+id UNIQUE INTEGER
+twitte_id INTEGER
+person_username CHAR(30)
+time TIMESTAMP
+comment CHAR(500)
+
+massages
+id UNIQUE INTEGER
+sender_id INTEGER
+reciever_id INTEGER
+time TIMESTAMP
+seen BOOLEAN
+massage CHAR(300)
